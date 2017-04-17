@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsMisterCocktail</title>
+
+    <title><%= yield(:title_tag).blank? ? "Mister Cocktail" : "#{yield(:title_tag)} - Mister Cocktail" %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,7 +12,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <!-- app/views/layouts/application.html.erb -->
 
-    <title><%= yield(:title_tag).blank? ? "Mister Cocktail" : "#{yield(:title_tag)} - Mister Cocktail" %></title>
 
   </head>
 
